@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/scandiweb-test-assignment/static/css/main.2d951e6f.css",
-    "main.js": "/scandiweb-test-assignment/static/js/main.a20874a6.js",
+    "main.js": "/scandiweb-test-assignment/static/js/main.e452d24f.js",
     "index.html": "/scandiweb-test-assignment/index.html",
     "main.2d951e6f.css.map": "/scandiweb-test-assignment/static/css/main.2d951e6f.css.map",
-    "main.a20874a6.js.map": "/scandiweb-test-assignment/static/js/main.a20874a6.js.map"
+    "main.e452d24f.js.map": "/scandiweb-test-assignment/static/js/main.e452d24f.js.map"
   },
   "entrypoints": [
     "static/css/main.2d951e6f.css",
-    "static/js/main.a20874a6.js"
+    "static/js/main.e452d24f.js"
   ]
 }
