@@ -1,0 +1,228 @@
+@import "../../../styles/variables";
+
+.c-cart {
+  padding: 80px 0 274px 0;
+  &__header {
+    margin-bottom: 55px;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: $c-text;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-left {
+    max-width: 970px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-brand {
+    margin-bottom: 16px;
+    &--paragraph {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 27px;
+      color: $c-text;
+    }
+  }
+  &__item-name {
+    margin-bottom: 20px;
+    &--paragraph {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 27px;
+      color: $c-text;
+    }
+  }
+  &__item-price {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__symbol,
+  &__price {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: $c-text;
+  }
+  &__price-hide {
+    display: none;
+  }
+  &__item-count {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: center;
+  }
+  &__item-increase {
+    width: 45px;
+    border: 1px solid #1d1f22;
+    background-color: white;
+    padding: 14px 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &--plus {
+      background: $c-text;
+      height: 15px;
+      width: 1px;
+      position: relative;
+      left: 0px;
+    }
+    &--plus:after {
+      content: "";
+      height: 1px;
+      width: 14px;
+      background: #1d1f22;
+      position: absolute;
+      left: -6px;
+      top: 7px;
+    }
+  }
+  &__item-dicrease {
+    cursor: pointer;
+    width: 45px;
+    border: 1px solid #1d1f22;
+    background-color: white;
+    padding: 21px 0;
+    display: flex;
+    justify-content: center;
+    & &--minus {
+      background: $c-text;
+      height: 1px;
+      width: 14px;
+      position: relative;
+      left: 0px;
+    }
+  }
+  &__item-quantity {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 160%;
+    color: $c-text;
+  }
+  &__item-img {
+    max-width: 200px;
+    width: 100%;
+    height: 288px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  &__button-group {
+    max-width: 56px;
+    width: 100%;
+    position: relative;
+    top: -46px;
+    float: right;
+    right: 64px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__button {
+    &--left,
+    &--right {
+      cursor: pointer;
+      max-width: 24px;
+      width: 100%;
+      color: white;
+      padding: 3px 8px;
+      background: rgba(0, 0, 0, 0.73);
+      border: none;
+    }
+  }
+  &__item-divider {
+    background: #e5e5e5;
+    width: 100%;
+    height: 1px;
+    margin: 30px 0;
+  }
+  &__totals {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 279px;
+    width: 100%;
+  }
+  &__tax,
+  &__quantity,
+  &__total {
+    display: flex;
+  }
+  &__tax {
+    &--paragraph {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $c-text;
+    }
+    &--price {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $c-text;
+    }
+  }
+  &__quantity {
+    &--paragraph {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $c-text;
+    }
+    &--qty {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $c-text;
+    }
+  }
+  &__total {
+    &--paragraph {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $c-text;
+    }
+    &--price {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $c-text;
+    }
+  }
+  &__order-btn {
+    max-width: 279px;
+    width: 100%;
+    padding: 16px 32px;
+    background-color: $c-primary;
+    border: 1px solid $c-primary;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    &--span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+}

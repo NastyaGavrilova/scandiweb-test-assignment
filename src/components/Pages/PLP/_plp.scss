@@ -1,0 +1,126 @@
+@import "../../../styles/variables";
+.c-all-products {
+  max-width: 1238px;
+  width: 100%;
+  &__wrapper {
+    padding: 80px 0 191px 0;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 160%;
+    color: $c-text;
+    margin-bottom: 103px;
+    text-transform: uppercase;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: 386px 386px 386px;
+    justify-content: space-between;
+  }
+  &__items-hide {
+    display: none;
+  }
+}
+.c-product-cart {
+  text-decoration: none;
+  max-width: 386px;
+  width: 100%;
+  background-color: white;
+  // transition: all ease-in-out 0.5s;
+  margin-bottom: 103px;
+
+  &__wrapper {
+    padding: 16px;
+  }
+  &__images {
+    max-height: 330px;
+    margin-bottom: 24px;
+  }
+  &__image {
+    max-width: 354px;
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  &__content {
+    max-width: 354px;
+    width: 100%;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+    color: $c-text;
+    text-decoration: none;
+  }
+  &__price {
+    display: flex;
+  }
+  &__symbol,
+  &__amount {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: $c-text;
+  }
+  &__amount-hide {
+    display: none;
+  }
+  &__shopping-cart-show {
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    position: absolute;
+    top: 304px;
+    right: 15px;
+    max-width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: $c-primary;
+    border: none;
+    padding: 14px;
+  }
+  &__shopping-cart-hide {
+    display: none;
+  }
+  &__inStock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 356px;
+    height: 338px;
+    background-color: rgba(210, 210, 210, 0.471);
+    position: relative;
+    top: -335px;
+  }
+
+  &__out-of-stock {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+    color: #8d8f9a;
+  }
+  &__img-overlay {
+    width: 356px;
+    height: 330px;
+    background-color: rgba(110, 110, 110, 0.061);
+    position: relative;
+    top: -335px;
+  }
+}
+.c-product-cart > .c-product-cart__shopping-cart-show {
+  transition: all ease-in-out 0.5s;
+}
+.c-product-cart-6,
+.c-product-cart-7 {
+  margin-bottom: 0;
+}
+.c-product-cart:hover {
+  filter: drop-shadow(0px 4px 35px rgba(168, 172, 176, 0.19));
+}

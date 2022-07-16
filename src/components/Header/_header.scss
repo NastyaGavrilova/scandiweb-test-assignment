@@ -1,0 +1,177 @@
+@import "../../styles/variables";
+.c-header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  min-height: 2em;
+  z-index: 20;
+  &__wrapper {
+    padding: 24px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 22px;
+    max-width: 204px;
+    width: 100%;
+  }
+  &__currency {
+    max-width: 38px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &--text {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 160%;
+      color: $c-text;
+    }
+    &--arrow {
+      cursor: pointer;
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-bottom: 1px solid $c-text;
+      border-right: 1px solid $c-text;
+      margin-left: 5px;
+    }
+    &__list-item {
+      max-width: 114px;
+      width: 100%;
+      background-color: white;
+      transition: all ease-in 0.5s;
+      cursor: pointer;
+      &__wrapper {
+        display: flex;
+        align-items: center;
+      }
+      &__wrapper-0 {
+        padding: 20px 40px 13px 20px;
+      }
+      &__wrapper-1,
+      &__wrapper-2,
+      &__wrapper-3 {
+        padding: 8px 38px 8px 20px;
+      }
+      &__wrapper-4 {
+        padding: 13px 46px 20px 20px;
+      }
+    }
+    &__list-item:hover {
+      background-color: $c-grey;
+    }
+    &__symbol,
+    &__label {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 160%;
+      color: $c-text;
+    }
+    &__symbol {
+      margin-right: 2px;
+    }
+  }
+  &__currency-list-show {
+    display: block;
+    max-width: 114px;
+    width: 100%;
+    list-style-type: none;
+    position: absolute;
+    top: 65px;
+    right: 21px;
+    filter: drop-shadow(0px 4px 35px rgba(168, 172, 176, 0.19));
+  }
+  &__basket {
+    cursor: pointer;
+  }
+  &__currency-list-hide {
+    display: none;
+  }
+  &__bascket-counter-hide {
+    display: none;
+  }
+  &__bascket-counter {
+    border-radius: 50%;
+    background-color: $c-text;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    right: -10px;
+    &--count {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 13px;
+      color: white;
+      text-align: center;
+      padding: 1.5px 0;
+    }
+  }
+}
+.down {
+  transform: rotate(45deg);
+}
+.up {
+  transform: rotate(-135deg);
+}
+.c-navigation {
+  &__list {
+    list-style-type: none;
+    max-width: 234px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__wrapper,
+  &__wrapper-active {
+    max-width: 97px;
+    width: 100%;
+    padding-bottom: 30px;
+    text-decoration: none;
+  }
+  &__wrapper {
+    border-bottom: 2px solid white;
+  }
+  &__wrapper-active {
+    transition: all ease-in-out 0.5s;
+    border-bottom: 2px solid $c-primary;
+  }
+  &__wrapper-active > &__list-item {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: $c-primary;
+  }
+  &__list-item {
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 0 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: $c-text;
+    transition: all ease-in-out 0.5s;
+  }
+}
+.c-main-overlay {
+  height: 100%;
+  position: fixed;
+  top: 75px;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(45, 44, 44, 0.285);
+  z-index: 5;
+}

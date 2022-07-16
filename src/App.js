@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { graphql } from "@apollo/client/react/hoc";
+import { gql } from "@apollo/client";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from "./components/Header/Header";
+
+class App extends React.Component {
+  render() {
+    const {
+      data: { loading, error, categories, currencies },
+    } = this.props;
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error :(</p>;
+
+    return (
+      <div className="App">
+        <Header categories={categories} currencies={currencies} />
+      </div>
+    );
+  }
 }
-
-export default App;
+const withProductQuery = graphql(gql`
+  query getProductsCategory {
+    categories {
+      name
+      products {
+        id
+        name
+        brand
+        gallery
+        inStock
+        prices {
+          amount
+          currency {
+            label
+            symbol
+          }
+        }
+        description
+        attributes {
+          id
+          name
+          type
+          items {
+            id
+            value
+            displayValue
+          }
+        }
+      }
+    }
+    currencies {
+      label
+      symbol
+    }
+  }
+`);
+const AppWithData = withProductQuery(App);
+export default AppWithData;

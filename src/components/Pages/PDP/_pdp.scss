@@ -1,0 +1,190 @@
+@import "../../../styles/variables";
+.c-product-page {
+  max-width: 1122px;
+  width: 100%;
+  padding: 80px 0 180px 0;
+  &__wrapper {
+    display: flex;
+  }
+  &__gallery {
+    max-width: 730px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    margin-right: 100px;
+  }
+  &__carusel {
+    max-width: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__image {
+    cursor: pointer;
+    max-width: 80px;
+    width: 100%;
+    object-fit: cover;
+    height: 80px;
+  }
+  &__selected-image {
+    max-width: 610px;
+    width: 100%;
+    object-fit: cover;
+    height: 510px;
+  }
+  &__description {
+    max-width: 292px;
+    width: 100%;
+  }
+  &__brand-name {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 43px;
+  }
+  &__brand {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 27px;
+    color: $c-text;
+  }
+  &__name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 27px;
+    color: $c-text;
+  }
+  &__attr-value-none {
+    display: none;
+  }
+  &__attributes {
+    margin-bottom: 36px;
+  }
+  &__attribute {
+    margin-bottom: 24px;
+  }
+  &__attr-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: $c-text;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  &__attr-btns {
+    max-width: 288px;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+  }
+  &__attr-btn {
+    max-width: 65px;
+    width: 100%;
+    border: 1px solid #1d1f22;
+    background-color: white;
+    padding: 14px 0;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+    color: $c-text;
+  }
+  &__attr-value {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  &__selected-attr {
+    max-width: 65px !important;
+    width: 100%;
+    border: 1px solid #1d1f22;
+    background-color: #1d1f22;
+    padding: 14px 0 !important;
+    color: white;
+  }
+  &__attr-btn:hover {
+    max-width: 65px;
+    width: 100%;
+    border: 1px solid #1d1f22;
+    background-color: #1d1f22;
+    padding: 14px 0;
+    color: white;
+  }
+
+  &__atr-color-btn {
+    max-width: 32px;
+    width: 100%;
+    height: 32px;
+    border: none;
+  }
+  &__price {
+    margin-bottom: 20px;
+    &--paragraph {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 18px;
+      color: $c-text;
+      margin-bottom: 10px;
+    }
+    &--amont {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 18px;
+      color: $c-text;
+    }
+    &--amont-hide {
+      display: none;
+    }
+  }
+  &__symbol {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 18px;
+    color: $c-text;
+  }
+  &__amount {
+    display: flex;
+  }
+  &__add-to-cart {
+    max-width: 292px;
+    width: 100%;
+    background-color: $c-primary;
+    padding: 16px 90px;
+    border: 1px solid $c-primary;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: white;
+  }
+  &__add-to-cart:hover {
+    max-width: 292px;
+    width: 100%;
+    background-color: white;
+    padding: 16px 90px;
+    border: 1px solid $c-primary;
+    margin-bottom: 40px;
+    cursor: pointer;
+    color: $c-primary;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+  }
+  &__descr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 159.96%;
+    color: $c-text;
+  }
+}
