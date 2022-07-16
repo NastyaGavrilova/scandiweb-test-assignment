@@ -288,7 +288,7 @@ class Header extends React.Component {
             ))}
 
             <Route
-              path={`/`}
+              path={`/scandiweb-test-assignment/`}
               element={
                 <PLP
                   symbol={selected}
