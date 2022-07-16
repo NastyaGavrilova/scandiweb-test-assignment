@@ -308,6 +308,7 @@ class Header extends React.Component {
                   selectedAttribute={selectedAttr}
                   onAdd={this.onAdd}
                   onRemove={this.onRemove}
+                  onDelete={this.onDelete}
                   product={categories[0].products.map((product) => product)}
                 />
               }
